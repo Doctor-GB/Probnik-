@@ -1,6 +1,44 @@
 {
-  "ui": {
-    "title": "Моя страница с карточками",
-    "placeholder": "Проверка направления ввода..."
+  "ui": { "title": "Моя страница с карточками" },
+  "sec": { "langs": "Языки и технологии", "devops": "DevOps", "algo": "Алгоритмы", "web": "Web" },
+  "c": {
+    "langs": "Языки", "be": "Backend", "fe": "Frontend", "db": "Базы данных", "git": "Git", "http": "HTTP методы",
+    "arch": "Архитектура", "test": "Тестирование", "edit": "Редакторы", "os": "Операционные",
+    "cont": "Контейнеры", "orch": "Оркестрация", "cicd": "CI/CD", "cloud": "Облака", "mon": "Мониторинг",
+    "logs": "Логи", "net": "Сети", "serv": "Серверы", "scr": "Скрипты", "util": "Утилиты",
+    "sort": "Сортировки", "search": "Поиск", "struct": "Структуры", "hash": "Хеши", "tree": "Деревья",
+    "graph": "Графы", "comp": "Сложность", "rec": "Рекурсия", "greed": "Жадные", "misc": "Разное",
+    "wfe": "Frontend", "fw": "Фреймворки", "wbe": "Backend", "api": "API", "auth": "Авторизация",
+    "sec": "Безопасность", "cssw": "CSS", "build": "Сборка", "wtest": "Тесты Web", "other": "Прочее"
+  },
+  "t": {
+    "js": "JavaScript", "py": "Python", "java": "Java", "cpp": "C++", "node": "Node.js", "django": "Django",
+    "spring": "Spring", "express": "Express", "react": "React", "vue": "Vue", "ang": "Angular", "svelte": "Svelte",
+    "mysql": "MySQL", "mongo": "MongoDB", "pg": "PostgreSQL", "redis": "Redis", "gh": "GitHub", "gl": "GitLab",
+    "bb": "Bitbucket", "st": "SourceTree", "get": "GET", "post": "POST", "put": "PUT", "del": "DELETE",
+    "mvc": "MVC", "mvp": "MVP", "mvvm": "MVVM", "clean": "Clean", "unit": "Unit", "int": "Integration",
+    "e2e": "E2E", "mock": "Mock", "vs": "VS Code", "ws": "WebStorm", "ij": "IntelliJ", "sub": "Sublime",
+    "linux": "Linux", "win": "Windows", "mac": "macOS", "ubu": "Ubuntu", "docker": "Docker", "pod": "Podman",
+    "lxc": "LXC", "contd": "Containerd", "k8s": "Kubernetes", "swarm": "Swarm", "os": "OpenShift", "nom": "Nomad",
+    "jenk": "Jenkins", "gha": "GitHub Actions", "glc": "GitLab CI", "circle": "CircleCI", "aws": "AWS",
+    "az": "Azure", "gcp": "GCP", "do": "DigitalOcean", "prom": "Prometheus", "graf": "Grafana",
+    "zab": "Zabbix", "dd": "Datadog", "elk": "ELK Stack", "flu": "Fluentd", "log": "Logstash",
+    "kib": "Kibana", "tcp": "TCP/IP", "udp": "UDP", "httpn": "HTTP", "https": "HTTPS", "nginx": "Nginx",
+    "ap": "Apache", "cad": "Caddy", "iis": "IIS", "bash": "Bash", "pwsh": "PowerShell", "pys": "Python",
+    "perl": "Perl", "ssh": "SSH", "ftp": "FTP", "scp": "SCP", "rsync": "rsync", "bub": "Bubble",
+    "quick": "Quick", "mer": "Merge", "heap": "Heap", "bin": "Binary", "lin": "Linear", "dfs": "DFS",
+    "bfs": "BFS", "arr": "Array", "list": "List", "stack": "Stack", "q": "Queue", "hmap": "HashMap",
+    "hset": "HashSet", "htab": "HashTable", "key": "Key", "btree": "Binary", "avl": "AVL", "rb": "Red-Black",
+    "trie": "Trie", "nodes": "Nodes", "edges": "Edges", "w": "Weight", "path": "Path", "o1": "O(1)",
+    "on": "O(n)", "log": "O(log n)", "o2": "O(n²)", "cstack": "Call Stack", "base": "Base Case",
+    "recur": "Recursive", "ret": "Return", "cho": "Choice", "lopt": "Local Opt", "gopt": "Global Opt",
+    "fast": "Fast", "dyn": "Dynamic", "memo": "Memoization", "cache": "Cache", "state": "State",
+    "html": "HTML5", "css": "CSS3", "jsd": "JavaScript", "dom": "DOM", "rfe": "React", "vuej": "Vue.js",
+    "angf": "Angular", "svel": "Svelte", "nodw": "Node.js", "djw": "Django", "spw": "Spring", "lar": "Laravel",
+    "rest": "REST", "gql": "GraphQL", "ws": "WebSocket", "grpc": "gRPC", "jwt": "JWT", "oauth": "OAuth 2.0",
+    "sess": "Session", "cook": "Cookies", "tls": "TLS/SSL", "cors": "CORS", "xss": "XSS", "csrf": "CSRF",
+    "flex": "Flexbox", "grid": "Grid", "mq": "Media Query", "resp": "Responsive", "webp": "Webpack",
+    "vite": "Vite", "par": "Parcel", "roll": "Rollup", "jest": "Jest", "moch": "Mocha", "chai": "Chai",
+    "vit": "Vitest", "seo": "SEO", "ssr": "SSR", "spa": "SPA", "pwa": "PWA"
   }
 }
