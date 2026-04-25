@@ -1,0 +1,952 @@
+/* styles.css */
+
+/* =========================================
+   1. ПЕРЕМЕННЫЕ И ПАЛИТРА
+   ========================================= */
+:root {
+  /* Базовые цвета (меняются через инпуты) */
+  --base-primary: #2563eb;
+  --base-secondary: #475569;
+  --base-accent: #9333ea;
+  --base-warning: #d97706;
+  --base-error: #e11d48;
+
+  /* Primary */
+  --p10: color-mix(in srgb, var(--base-primary) 5%, white);
+  --p100: color-mix(in srgb, var(--base-primary) 15%, white);
+  --p200: color-mix(in srgb, var(--base-primary) 30%, white);
+  --p300: color-mix(in srgb, var(--base-primary) 50%, white);
+  --p400: color-mix(in srgb, var(--base-primary) 70%, white);
+  --p500: var(--base-primary);
+  --p600: color-mix(in srgb, var(--base-primary) 90%, black);
+  --p700: color-mix(in srgb, var(--base-primary) 95%, black);
+  --p800: color-mix(in srgb, var(--base-primary) 98%, black);
+  --p1000: color-mix(in srgb, var(--base-primary) 100%, black);
+
+  /* Secondary */
+  --s10: color-mix(in srgb, var(--base-secondary) 5%, white);
+  --s100: color-mix(in srgb, var(--base-secondary) 15%, white);
+  --s200: color-mix(in srgb, var(--base-secondary) 30%, white);
+  --s300: color-mix(in srgb, var(--base-secondary) 50%, white);
+  --s400: color-mix(in srgb, var(--base-secondary) 70%, white);
+  --s500: var(--base-secondary);
+  --s600: color-mix(in srgb, var(--base-secondary) 90%, black);
+  --s700: color-mix(in srgb, var(--base-secondary) 95%, black);
+  --s800: color-mix(in srgb, var(--base-secondary) 98%, black);
+  --s1000: color-mix(in srgb, var(--base-secondary) 100%, black);
+
+  /* Accent */
+  --a10: color-mix(in srgb, var(--base-accent) 5%, white);
+  --a100: color-mix(in srgb, var(--base-accent) 15%, white);
+  --a200: color-mix(in srgb, var(--base-accent) 30%, white);
+  --a300: color-mix(in srgb, var(--base-accent) 50%, white);
+  --a400: color-mix(in srgb, var(--base-accent) 70%, white);
+  --a500: var(--base-accent);
+  --a600: color-mix(in srgb, var(--base-accent) 90%, black);
+  --a700: color-mix(in srgb, var(--base-accent) 95%, black);
+  --a800: color-mix(in srgb, var(--base-accent) 98%, black);
+  --a1000: color-mix(in srgb, var(--base-accent) 100%, black);
+
+  /* Warning */
+  --w10: color-mix(in srgb, var(--base-warning) 5%, white);
+  --w100: color-mix(in srgb, var(--base-warning) 15%, white);
+  --w200: color-mix(in srgb, var(--base-warning) 30%, white);
+  --w300: color-mix(in srgb, var(--base-warning) 50%, white);
+  --w400: color-mix(in srgb, var(--base-warning) 70%, white);
+  --w500: var(--base-warning);
+  --w600: color-mix(in srgb, var(--base-warning) 90%, black);
+  --w700: color-mix(in srgb, var(--base-warning) 95%, black);
+  --w800: color-mix(in srgb, var(--base-warning) 98%, black);
+  --w1000: color-mix(in srgb, var(--base-warning) 100%, black);
+
+  /* Error */
+  --e10: color-mix(in srgb, var(--base-error) 5%, white);
+  --e100: color-mix(in srgb, var(--base-error) 15%, white);
+  --e200: color-mix(in srgb, var(--base-error) 30%, white);
+  --e300: color-mix(in srgb, var(--base-error) 50%, white);
+  --e400: color-mix(in srgb, var(--base-error) 70%, white);
+  --e500: var(--base-error);
+  --e600: color-mix(in srgb, var(--base-error) 90%, black);
+  --e700: color-mix(in srgb, var(--base-error) 95%, black);
+  --e800: color-mix(in srgb, var(--base-error) 98%, black);
+  --e1000: color-mix(in srgb, var(--base-error) 100%, black);
+
+  /* System */
+  --font-main: system-ui, sans-serif;
+  --trans: 0.25s ease;
+  --radius: 1rem;
+  --shadow: 0 0.3125rem 1.25rem rgba(0, 0, 0, 0.1);
+}
+
+/* =========================================
+   2. СБРОС И БАЗА
+   ========================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font: 1rem / 1.5 var(--font-main);
+  background: var(--s50);
+  color: var(--s900);
+  padding: 1.25rem;
+  text-align: center;
+}
+
+/* =========================================
+   3. ЛЕЙАУТ
+   ========================================= */
+.wrap {
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.sec {
+  margin: 1.5rem 0;
+  padding: 0.625rem;
+  border-radius: var(--radius);
+}
+
+.sec-title {
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* =========================================
+   4. КАРТОЧКИ И ТЕГИ (БАЗОВЫЕ)
+   ========================================= */
+.card {
+  width: 16.25rem;
+  min-height: 11.25rem;
+  padding: 0.875rem;
+  transition: var(--trans);
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--radius);
+  background: #fff;
+  border: 0.125rem solid var(--s200);
+}
+
+.card h3 {
+  margin: 0 0 0.625rem;
+  font-size: 0.9375rem;
+  padding-bottom: 0.25rem;
+  border-block-end: 0.0625rem solid var(--s300);
+  width: 100%;
+}
+
+.tag {
+  padding: 0.4375rem 0.75rem;
+  margin: 0.25rem;
+  font: bold 0.8125rem var(--font-main);
+  transition: 0.2s;
+  cursor: default;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  min-width: 3.75rem;
+  max-width: 90%;
+  border-radius: 0.5rem;
+  border: 0.125rem solid transparent;
+}
+
+/* =========================================
+   5. ПАНЕЛЬ УПРАВЛЕНИЯ И ИНПУТЫ
+   ========================================= */
+.toolbar {
+  position: fixed;
+  inset-inline-end: 1rem;
+  inset-block-start: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 100;
+  background: #fff;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  align-items: flex-end;
+}
+
+.ctrl-group {
+  display: flex;
+  gap: 0.375rem;
+  align-items: center;
+}
+
+.ctrl {
+  padding: 0.375rem 0.625rem;
+  border: 0.125rem solid var(--s300);
+  background: #fff;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font: 600 0.8125rem var(--font-main);
+  transition: 0.2s;
+  min-width: 2.25rem;
+}
+
+.ctrl:hover {
+  background: var(--s100);
+}
+
+.ctrl.active {
+  background: var(--p500);
+  color: #fff;
+  border-color: var(--p600);
+}
+
+.divider {
+  width: 100%;
+  height: 0.0625rem;
+  background: var(--s300);
+  margin: 0.25rem 0;
+}
+
+.color-input {
+  width: 2rem;
+  height: 2rem;
+  border: 0.125rem solid var(--s300);
+  border-radius: 0.375rem;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+}
+
+.demo-input {
+  margin: 1rem auto;
+  padding: 0.625rem 0.875rem;
+  font: 0.875rem var(--font-main);
+  border: 0.125rem solid var(--s300);
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 25rem;
+  outline: none;
+  transition: 0.2s;
+  background: #fff;
+}
+
+.demo-input:focus {
+  border-color: var(--p500);
+  box-shadow: 0 0 0 0.1875rem color-mix(
+    in srgb,
+    var(--p500) 20%,
+    transparent
+  );
+}
+
+/* =========================================
+   6. ТЕМЫ СЕКЦИЙ
+   ========================================= */
+.sec1 {
+  background: linear-gradient(180deg, var(--p10), var(--p100));
+  border: 0.0625rem solid var(--p200);
+}
+
+.sec2 {
+  background: linear-gradient(180deg, var(--s10), var(--s100));
+  border: 0.0625rem solid var(--s200);
+}
+
+.sec3 {
+  background: linear-gradient(180deg, var(--a10), var(--a100));
+  border: 0.0625rem solid var(--a200);
+}
+
+.sec4 {
+  background: linear-gradient(180deg, var(--w10), var(--w100));
+  border: 0.0625rem solid var(--w200);
+}
+
+/* =========================================
+   7. УНИКАЛЬНЫЕ СТИЛИ КАРТОЧЕК (b1-b40)
+   ========================================= */
+.b1 {
+  border: 0.125rem dashed var(--p300);
+  border-radius: 1.125rem;
+  background: var(--p10);
+  box-shadow: 0.3125rem 0.3125rem 0 var(--p200);
+}
+.b1:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0.1875rem 0.1875rem 0 var(--p400);
+}
+
+.b2 {
+  border: 0.1875rem double var(--p500);
+  border-radius: 0.625rem 1.5625rem;
+  background: linear-gradient(135deg, var(--p10), var(--p50));
+  box-shadow: 0 0.5rem 1rem color-mix(in srgb, var(--p500) 15%, transparent);
+}
+.b2:hover {
+  transform: scale(1.04);
+}
+
+.b3 {
+  border-inline-start: 0.3125rem solid var(--p500);
+  border-radius: 0.375rem;
+  background: var(--p10);
+  box-shadow: -0.1875rem 0.25rem 0.625rem color-mix(in srgb, var(--p500) 20%, transparent);
+}
+.b3:hover {
+  transform: rotate(-1deg);
+}
+
+.b4 {
+  outline: 0.1875rem solid var(--e500);
+  border-radius: 0.9375rem;
+  background: linear-gradient(135deg, var(--e10), var(--e50));
+  box-shadow: inset 0 0 0.75rem color-mix(in srgb, var(--e500) 10%, transparent);
+}
+.b4:hover {
+  outline-color: var(--e600);
+  transform: skewX(2deg);
+}
+
+.b5 {
+  border: 0.125rem solid transparent;
+  background-clip: padding-box;
+  box-shadow: 0 0 0 0.125rem var(--a500), 0 0.375rem 0.875rem color-mix(in srgb, var(--a500) 25%, transparent);
+  border-radius: 0.875rem;
+}
+.b5:hover {
+  box-shadow: 0 0 0 0.1875rem var(--a600), 0 0.625rem 1.25rem color-mix(in srgb, var(--a500) 35%, transparent);
+}
+
+.b6 {
+  border-block-start: 0.375rem solid var(--a500);
+  border-radius: 0.25rem;
+  background: linear-gradient(to bottom, var(--p10), var(--p50));
+  box-shadow: 0 0.3125rem 0 var(--s300);
+}
+.b6:hover {
+  transform: translateY(-0.125rem);
+  box-shadow: 0 0.4375rem 0 var(--s400);
+}
+
+.b7 {
+  border: 0.0625rem dotted var(--s500);
+  border-radius: 1.25rem;
+  background: var(--s10);
+  box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.06);
+}
+.b7:hover {
+  border-style: solid;
+  transform: scale(0.98);
+}
+
+.b8 {
+  border: 0.125rem groove var(--s400);
+  border-radius: 0.75rem;
+  background: var(--s10);
+  box-shadow: 0.25rem 0.25rem 0.75rem rgba(0, 0, 0, 0.15);
+}
+.b8:hover {
+  transform: rotate(1deg) scale(1.02);
+}
+
+.b9 {
+  border: 0.1875rem ridge var(--w400);
+  border-radius: 0.5rem;
+  background: linear-gradient(45deg, var(--w10), var(--w50));
+  box-shadow: 0 0.625rem 1.125rem color-mix(in srgb, var(--w400) 20%, transparent);
+}
+.b9:hover {
+  filter: brightness(0.96);
+  transform: translateX(0.1875rem);
+}
+
+.b10 {
+  border-block-end: 0.25rem dashed var(--s600);
+  border-radius: 1.5625rem 0.5rem;
+  background: var(--s10);
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+}
+.b10:hover {
+  border-block-end-color: var(--s800);
+  transform: translateY(0.125rem);
+}
+
+.b11 {
+  border: 0.125rem inset var(--s400);
+  border-radius: 0.625rem;
+  background: var(--s100);
+  box-shadow: 0 0 0.375rem rgba(0, 0, 0, 0.1);
+}
+.b11:hover {
+  border-style: outset;
+  background: var(--s200);
+}
+
+.b12 {
+  border: 0.0625rem solid var(--e400);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  background: linear-gradient(to right, var(--e10), var(--e50));
+  box-shadow: 0 0.5rem 1.25rem color-mix(in srgb, var(--e400) 20%, transparent);
+}
+.b12:hover {
+  border-radius: 0.875rem;
+  transform: scale(1.04);
+}
+
+.b13 {
+  border: 0.25rem double var(--w400);
+  border-radius: 1rem;
+  background: var(--w10);
+  box-shadow: 0.375rem 0.375rem 0.875rem color-mix(in srgb, var(--w400) 18%, transparent);
+}
+.b13:hover {
+  border-style: solid;
+  transform: rotate(-1.5deg);
+}
+
+.b14 {
+  border: 0.125rem solid var(--s600);
+  border-radius: 0 1.375rem 0 1.375rem;
+  background: radial-gradient(ellipse at center, var(--s100), var(--s200));
+  box-shadow: -0.25rem -0.25rem 0.75rem color-mix(in srgb, var(--s600) 25%, transparent);
+}
+.b14:hover {
+  transform: translate(-0.125rem, -0.125rem);
+  border-color: var(--s800);
+}
+
+.b15 {
+  border-block-start: 0.1875rem solid var(--e500);
+  border-inline-start: 0.1875rem solid var(--e500);
+  border-radius: 0.5rem;
+  background: linear-gradient(160deg, var(--e10), var(--e50));
+  box-shadow: 0.25rem 0.25rem 0 var(--e300);
+}
+.b15:hover {
+  transform: translate(0.1875rem, 0.1875rem);
+  box-shadow: 0 0 0 var(--e500);
+}
+
+.b16 {
+  border: 0.125rem dashed var(--a400);
+  border-radius: 1.75rem;
+  background: var(--a10);
+  box-shadow: 0 0.875rem 1.625rem color-mix(in srgb, var(--a400) 22%, transparent);
+}
+.b16:hover {
+  border-style: solid;
+  transform: scale(1.03) rotate(1deg);
+}
+
+.b17 {
+  border: 0.1875rem solid var(--a500);
+  border-radius: 0.375rem 0.375rem 1.25rem 0.375rem;
+  background: linear-gradient(to bottom right, var(--a10), var(--a50));
+  box-shadow: 0 0.375rem 0.75rem color-mix(in srgb, var(--a500) 20%, transparent);
+}
+.b17:hover {
+  transform: skewY(-1.5deg);
+  box-shadow: 0.125rem 0.5rem 1rem color-mix(in srgb, var(--a500) 30%, transparent);
+}
+
+.b18 {
+  outline: 0.125rem dotted var(--w500);
+  border-radius: 3.125rem;
+  background: linear-gradient(45deg, var(--w10), var(--w50));
+  box-shadow: 0 0.3125rem 0.625rem color-mix(in srgb, var(--w500) 25%, transparent);
+}
+.b18:hover {
+  outline-style: solid;
+  transform: scale(1.05);
+}
+
+.b19 {
+  border: 0.0625rem solid var(--w400);
+  border-radius: 0.75rem 0 0.75rem 0;
+  background: var(--w10);
+  box-shadow: inset 0 0 0.625rem color-mix(in srgb, var(--w400) 30%, transparent);
+}
+.b19:hover {
+  background: var(--w100);
+  transform: translateX(-0.125rem);
+}
+
+.b20 {
+  border: 0.125rem solid var(--p400);
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, var(--p10), var(--p50));
+  box-shadow: -0.3125rem 0.3125rem 0.75rem color-mix(in srgb, var(--p400) 25%, transparent);
+}
+.b20:hover {
+  transform: translateY(-0.25rem);
+  filter: contrast(1.05);
+}
+
+.b21 {
+  border: 0.1875rem double var(--a400);
+  border-radius: 0.9375rem;
+  background: var(--a10);
+  box-shadow: 0.25rem 0.25rem 0 var(--a200);
+}
+.b21:hover {
+  border-color: var(--a600);
+  transform: scale(1.02);
+}
+
+.b22 {
+  border: 0.0625rem dashed var(--p400);
+  border-radius: 1.25rem 0.3125rem 1.25rem 0.3125rem;
+  background: var(--p10);
+  box-shadow: 0 0.5rem 1rem color-mix(in srgb, var(--p400) 15%, transparent);
+}
+.b22:hover {
+  border-style: solid;
+  transform: rotate(1.5deg);
+}
+
+.b23 {
+  border-inline-start: 0.25rem solid var(--e500);
+  border-radius: 0 0.625rem 0.625rem 0;
+  background: var(--e10);
+  box-shadow: 0.1875rem 0.1875rem 0.625rem color-mix(in srgb, var(--e500) 20%, transparent);
+}
+.b23:hover {
+  transform: translateX(0.125rem);
+  border-inline-start-width: 0.375rem;
+}
+
+.b24 {
+  border: 0.125rem outset var(--s500);
+  border-radius: 0.625rem;
+  background: var(--s100);
+  box-shadow: inset 0 0 0.375rem rgba(0, 0, 0, 0.05);
+}
+.b24:hover {
+  border-style: inset;
+  background: var(--s200);
+}
+
+.b25 {
+  outline: 0.1875rem solid var(--w400);
+  border-radius: 0.75rem 0.75rem 1.5rem 0.75rem;
+  background: linear-gradient(to top, var(--w10), var(--w50));
+  box-shadow: 0 0.375rem 0.875rem color-mix(in srgb, var(--w400) 30%, transparent);
+}
+.b25:hover {
+  outline-color: var(--w600);
+  transform: scale(1.04);
+}
+
+.b26 {
+  border: 0.125rem solid var(--a400);
+  border-radius: 0.375rem;
+  background: var(--a10);
+  box-shadow: -0.25rem 0.375rem 0.875rem color-mix(in srgb, var(--a400) 25%, transparent);
+}
+.b26:hover {
+  transform: translate(-0.0625rem, 0.0625rem);
+  box-shadow: 0 0.125rem 0.375rem color-mix(in srgb, var(--a400) 30%, transparent);
+}
+
+.b27 {
+  border-block-start: 0.3125rem dotted var(--e400);
+  border-radius: 0.875rem;
+  background: var(--e10);
+  box-shadow: 0 0.625rem 1.25rem color-mix(in srgb, var(--e400) 20%, transparent);
+}
+.b27:hover {
+  border-block-start-color: var(--e500);
+  transform: rotate(-1deg);
+}
+
+.b28 {
+  border: 0.0625rem solid var(--p400);
+  border-radius: 0.9375rem 0.3125rem 0.9375rem 0.3125rem;
+  background: linear-gradient(45deg, var(--p10), var(--p50));
+  box-shadow: 0 0.25rem 0.75rem color-mix(in srgb, var(--p400) 20%, transparent);
+}
+.b28:hover {
+  border-radius: 0.5rem;
+  transform: skewX(-1.5deg);
+}
+
+.b29 {
+  border: 0.1875rem ridge var(--a400);
+  border-radius: 0.5rem;
+  background: var(--a10);
+  box-shadow: 0.3125rem 0.3125rem 0 var(--a200);
+}
+.b29:hover {
+  transform: translateY(-0.125rem);
+  box-shadow: 0.1875rem 0.1875rem 0 var(--a400);
+}
+
+.b30 {
+  border: 0.125rem solid var(--e500);
+  border-radius: 0 1rem 1rem 0;
+  background: linear-gradient(135deg, var(--e10), var(--e50));
+  box-shadow: -0.1875rem 0.1875rem 0.625rem color-mix(in srgb, var(--e500) 20%, transparent);
+}
+.b30:hover {
+  transform: scale(1.03);
+  filter: brightness(0.98);
+}
+
+.b31 {
+  border: 0.25rem double var(--a500);
+  border-radius: 0.75rem;
+  background: var(--a10);
+  box-shadow: 0 0.5rem 1rem color-mix(in srgb, var(--a500) 18%, transparent);
+}
+.b31:hover {
+  border-style: solid;
+  transform: translateX(0.1875rem);
+}
+
+.b32 {
+  border: 0.0625rem dashed var(--w500);
+  border-radius: 1.375rem;
+  background: var(--w10);
+  box-shadow: inset 0 0 0.75rem color-mix(in srgb, var(--w500) 15%, transparent);
+}
+.b32:hover {
+  border-style: solid;
+  transform: rotate(1.2deg);
+}
+
+.b33 {
+  border-inline-start: 0.3125rem solid var(--w400);
+  border-radius: 0.5rem;
+  background: var(--w10);
+  box-shadow: -0.25rem 0.25rem 0.75rem color-mix(in srgb, var(--w400) 25%, transparent);
+}
+.b33:hover {
+  transform: translateY(-0.1875rem);
+  border-inline-start-color: var(--w600);
+}
+
+.b34 {
+  border: 0.125rem groove var(--s600);
+  border-radius: 0.875rem;
+  background: var(--s100);
+  box-shadow: 0.25rem 0.25rem 0.625rem rgba(0, 0, 0, 0.15);
+}
+.b34:hover {
+  border-style: outset;
+  background: var(--s200);
+}
+
+.b35 {
+  outline: 0.125rem solid var(--p400);
+  border-radius: 0.625rem 0.625rem 1.25rem 0.625rem;
+  background: linear-gradient(to bottom right, var(--p10), var(--p50));
+  box-shadow: 0 0.375rem 0.875rem color-mix(in srgb, var(--p400) 20%, transparent);
+}
+.b35:hover {
+  outline-color: var(--p700);
+  transform: scale(1.04);
+}
+
+.b36 {
+  border: 0.1875rem solid var(--a500);
+  border-radius: 0.375rem 1.25rem 0.375rem 1.25rem;
+  background: var(--a10);
+  box-shadow: 0 0.3125rem 0.75rem color-mix(in srgb, var(--a500) 25%, transparent);
+}
+.b36:hover {
+  transform: skewY(1.5deg);
+  box-shadow: 0.125rem 0.4375rem 1rem color-mix(in srgb, var(--a500) 30%, transparent);
+}
+
+.b37 {
+  border-block-start: 0.25rem dotted var(--a400);
+  border-radius: 1rem;
+  background: var(--a10);
+  box-shadow: 0 0.75rem 1.375rem color-mix(in srgb, var(--a400) 20%, transparent);
+}
+.b37:hover {
+  border-block-start-color: var(--a600);
+  transform: translateY(0.125rem);
+}
+
+.b38 {
+  border: 0.0625rem solid var(--w400);
+  border-radius: 1.25rem;
+  background: linear-gradient(45deg, var(--w10), var(--w50));
+  box-shadow: 0 0.25rem 0.625rem color-mix(in srgb, var(--w400) 20%, transparent);
+}
+.b38:hover {
+  border-radius: 0.625rem;
+  transform: rotate(-1.5deg);
+}
+
+.b39 {
+  border: 0.125rem ridge var(--e400);
+  border-radius: 0.5rem;
+  background: var(--e10);
+  box-shadow: 0.3125rem 0.3125rem 0 var(--e200);
+}
+.b39:hover {
+  transform: translate(-0.125rem, -0.125rem);
+  box-shadow: 0.125rem 0.125rem 0 var(--e400);
+}
+
+.b40 {
+  border: 0.1875rem solid var(--e500);
+  border-radius: 0 0.875rem 0.875rem 0;
+  background: linear-gradient(135deg, var(--e10), var(--e50));
+  box-shadow: -0.25rem 0.25rem 0.875rem color-mix(in srgb, var(--e500) 20%, transparent);
+}
+.b40:hover {
+  transform: scale(1.02);
+  filter: contrast(1.05);
+}
+
+/* =========================================
+   8. СТИЛИ ТЕГОВ (sm1-sm16)
+   ========================================= */
+.sm1 {
+  background: var(--e100);
+  border-radius: 0.5rem;
+  border: 0.125rem solid var(--e300);
+  box-shadow: 0 0.125rem 0.25rem color-mix(in srgb, var(--e300) 40%, transparent);
+}
+.sm1:hover {
+  background: var(--e200);
+  transform: scale(1.08);
+}
+
+.sm2 {
+  background: var(--p100);
+  border-radius: 1.25rem;
+  border: 0.125rem dashed var(--p300);
+  box-shadow: 0 0.1875rem 0.375rem color-mix(in srgb, var(--p300) 30%, transparent);
+}
+.sm2:hover {
+  transform: rotate(10deg);
+  border-color: var(--p600);
+}
+
+.sm3 {
+  background: var(--a100);
+  border-radius: 0.25rem 0.75rem 0.75rem 0.25rem;
+  border-inline-start: 0.1875rem solid var(--a400);
+  box-shadow: inset 0 0 0.3125rem color-mix(in srgb, var(--a400) 20%, transparent);
+}
+.sm3:hover {
+  padding-inline-start: 1rem;
+  border-inline-start-width: 0.3125rem;
+}
+
+.sm4 {
+  background: var(--w100);
+  border: 0.125rem dotted var(--w400);
+  border-radius: 0.375rem;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+  box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.1);
+}
+.sm4:hover {
+  text-decoration: underline;
+  background: var(--w200);
+}
+
+.sm5 {
+  background: var(--e50);
+  border-radius: 0.75rem 0.25rem 0.75rem 0.25rem;
+  box-shadow: 0 0.25rem 0.5rem color-mix(in srgb, var(--e400) 20%, transparent);
+  outline: 0.125rem solid var(--e300);
+}
+.sm5:hover {
+  outline-color: var(--e400);
+  transform: translateY(-0.125rem);
+}
+
+.sm6 {
+  background: var(--a100);
+  border: 0.0625rem solid var(--a300);
+  border-radius: 0.5rem;
+  font-style: italic;
+  box-shadow: inset 0.125rem 0.125rem 0.25rem color-mix(in srgb, var(--a300) 30%, transparent);
+}
+.sm6:hover {
+  font-style: normal;
+  background: var(--a200);
+}
+
+.sm7 {
+  background: var(--p100);
+  border-block-start: 0.1875rem solid var(--p400);
+  border-radius: 0.375rem;
+  box-shadow: 0 -0.125rem 0.375rem color-mix(in srgb, var(--p400) 20%, transparent);
+}
+.sm7:hover {
+  border-block-start-color: var(--p600);
+  transform: rotate(-2deg);
+}
+
+.sm8 {
+  background: var(--w100);
+  border-radius: 0.375rem;
+  border: 0.125rem solid var(--w400);
+  box-shadow: 0.125rem 0.125rem 0 var(--w400);
+}
+.sm8:hover {
+  box-shadow: 0 0 0 var(--w400);
+  transform: translate(0.125rem, 0.125rem);
+}
+
+.sm9 {
+  background: var(--a100);
+  border: 0.0625rem solid var(--a500);
+  border-radius: 0.625rem;
+  text-shadow: 0 0.0625rem 0.125rem color-mix(in srgb, var(--a500) 50%, transparent);
+}
+.sm9:hover {
+  color: #fff;
+  background: var(--a500);
+}
+
+.sm10 {
+  background: var(--p100);
+  border: 0.0625rem solid var(--p400);
+  border-radius: 1.5625rem;
+  font-size: 0.75rem;
+  box-shadow: 0 0.125rem 0.3125rem color-mix(in srgb, var(--p400) 30%, transparent);
+}
+.sm10:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0.25rem 0.625rem color-mix(in srgb, var(--p500) 50%, transparent);
+}
+
+.sm11 {
+  background: var(--e100);
+  border-radius: 1.25rem;
+  border: 0.125rem double var(--e400);
+  padding: 0.3125rem 0.625rem;
+}
+.sm11:hover {
+  border-style: solid;
+  background: var(--e200);
+}
+
+.sm12 {
+  background: var(--p100);
+  border: 0.0625rem solid var(--p300);
+  border-radius: 0.5rem 0.5rem 0 0;
+  box-shadow: 0 0.1875rem 0 var(--p300);
+}
+.sm12:hover {
+  box-shadow: 0 0.0625rem 0 var(--p400);
+  transform: translateY(0.125rem);
+}
+
+.sm13 {
+  background: var(--a100);
+  border: 0.0625rem solid var(--a300);
+  border-radius: 0.5rem;
+  border-block-end: 0.1875rem solid var(--a500);
+}
+.sm13:hover {
+  border-block-end-width: 0.0625rem;
+  transform: translateY(0.125rem);
+}
+
+.sm14 {
+  background: var(--w100);
+  border: 0.125rem solid var(--w400);
+  border-radius: 0.625rem;
+  text-align: center;
+}
+.sm14:hover {
+  background: var(--w200);
+  transform: scale(1.06);
+}
+
+.sm15 {
+  background: var(--p100);
+  border: 0.0625rem dashed var(--p400);
+  border-radius: 0.75rem;
+  box-shadow: inset 0 0 0.5rem color-mix(in srgb, var(--p400) 20%, transparent);
+}
+.sm15:hover {
+  border-style: solid;
+  background: var(--p200);
+}
+
+.sm16 {
+  background: var(--w100);
+  border: 0.0625rem solid var(--w300);
+  border-radius: 0.375rem 0.875rem 0.375rem 0.875rem;
+  letter-spacing: 0.03125rem;
+}
+.sm16:hover {
+  background: var(--w50);
+  transform: rotate(1.5deg);
+}
+
+/* =========================================
+   9. RTL ПЕРЕОПРЕДЕЛЕНИЯ
+   ========================================= */
+[dir="rtl"] .card h3 {
+  text-align: right;
+}
+
+[dir="rtl"] .tag {
+  text-align: center;
+}
+
+/* =========================================
+   10. АДАПТИВНОСТЬ (Breakpoints)
+   ========================================= */
+@media (min-width: 34.375rem) {
+  .grid {
+    gap: 1.25rem;
+  }
+  .card {
+    width: 45%;
+    min-height: 12.5rem;
+  }
+}
+
+@media (min-width: 35.4375rem) {
+  .wrap {
+    max-width: 90%;
+  }
+  .sec {
+    padding: 1rem;
+  }
+  .card {
+    width: 30%;
+  }
+}
+
+@media (min-width: 93.125rem) {
+  .wrap {
+    max-width: 85rem;
+  }
+  .grid {
+    gap: 1.5rem;
+  }
+  .card {
+    width: 22%;
+    min-height: 13.75rem;
+  }
+  .sec-title {
+    font-size: 1.25rem;
+  }
+}
