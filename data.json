@@ -1,0 +1,72 @@
+{
+  "sections": [
+    {
+      "id": "langs",
+      "sectionTitle": "Языки и технологии",
+      "themeClass": "sec1",
+      "cards": [
+        { "title": "Языки", "tags": ["JavaScript", "Python", "Java", "C++"], "cardClass": "b1" },
+        { "title": "Backend", "tags": ["Node.js", "Django", "Spring", "Express"], "cardClass": "b2" },
+        { "title": "Frontend", "tags": ["React", "Vue", "Angular", "Svelte"], "cardClass": "b3" },
+        { "title": "Базы данных", "tags": ["MySQL", "MongoDB", "PostgreSQL", "Redis"], "cardClass": "b4" },
+        { "title": "Git", "tags": ["GitHub", "GitLab", "Bitbucket", "SourceTree"], "cardClass": "b5" },
+        { "title": "HTTP методы", "tags": ["GET", "POST", "PUT", "DELETE"], "cardClass": "b6" },
+        { "title": "Архитектура", "tags": ["MVC", "MVP", "MVVM", "Clean"], "cardClass": "b7" },
+        { "title": "Тестирование", "tags": ["Unit", "Integration", "E2E", "Mock"], "cardClass": "b8" },
+        { "title": "Редакторы", "tags": ["VS Code", "WebStorm", "IntelliJ", "Sublime"], "cardClass": "b9" },
+        { "title": "Операционные", "tags": ["Linux", "Windows", "macOS", "Ubuntu"], "cardClass": "b10" }
+      ]
+    },
+    {
+      "id": "devops",
+      "sectionTitle": "DevOps",
+      "themeClass": "sec2",
+      "cards": [
+        { "title": "Контейнеры", "tags": ["Docker", "Podman", "LXC", "Containerd"], "cardClass": "b11" },
+        { "title": "Оркестрация", "tags": ["Kubernetes", "Swarm", "OpenShift", "Nomad"], "cardClass": "b12" },
+        { "title": "CI/CD", "tags": ["Jenkins", "GitHub Actions", "GitLab CI", "CircleCI"], "cardClass": "b13" },
+        { "title": "Облака", "tags": ["AWS", "Azure", "GCP", "DigitalOcean"], "cardClass": "b14" },
+        { "title": "Мониторинг", "tags": ["Prometheus", "Grafana", "Zabbix", "Datadog"], "cardClass": "b15" },
+        { "title": "Логи", "tags": ["ELK Stack", "Fluentd", "Logstash", "Kibana"], "cardClass": "b16" },
+        { "title": "Сети", "tags": ["TCP/IP", "UDP", "HTTP", "HTTPS"], "cardClass": "b17" },
+        { "title": "Серверы", "tags": ["Nginx", "Apache", "Caddy", "IIS"], "cardClass": "b18" },
+        { "title": "Скрипты", "tags": ["Bash", "PowerShell", "Python", "Perl"], "cardClass": "b19" },
+        { "title": "Утилиты", "tags": ["SSH", "FTP", "SCP", "rsync"], "cardClass": "b20" }
+      ]
+    },
+    {
+      "id": "algo",
+      "sectionTitle": "Алгоритмы",
+      "themeClass": "sec3",
+      "cards": [
+        { "title": "Сортировки", "tags": ["Bubble", "Quick", "Merge", "Heap"], "cardClass": "b21" },
+        { "title": "Поиск", "tags": ["Binary", "Linear", "DFS", "BFS"], "cardClass": "b22" },
+        { "title": "Структуры", "tags": ["Array", "List", "Stack", "Queue"], "cardClass": "b23" },
+        { "title": "Хеши", "tags": ["HashMap", "HashSet", "HashTable", "Key"], "cardClass": "b24" },
+        { "title": "Деревья", "tags": ["Binary", "AVL", "Red-Black", "Trie"], "cardClass": "b25" },
+        { "title": "Графы", "tags": ["Nodes", "Edges", "Weight", "Path"], "cardClass": "b26" },
+        { "title": "Сложность", "tags": ["O(1)", "O(n)", "O(log n)", "O(n²)"], "cardClass": "b27" },
+        { "title": "Рекурсия", "tags": ["Call Stack", "Base Case", "Recursive", "Return"], "cardClass": "b28" },
+        { "title": "Жадные", "tags": ["Choice", "Local Opt", "Global Opt", "Fast"], "cardClass": "b29" },
+        { "title": "Разное", "tags": ["Dynamic", "Memoization", "Cache", "State"], "cardClass": "b30" }
+      ]
+    },
+    {
+      "id": "web",
+      "sectionTitle": "Web",
+      "themeClass": "sec4",
+      "cards": [
+        { "title": "Frontend", "tags": ["HTML5", "CSS3", "JavaScript", "DOM"], "cardClass": "b31" },
+        { "title": "Фреймворки", "tags": ["React", "Vue.js", "Angular", "Svelte"], "cardClass": "b32" },
+        { "title": "Backend", "tags": ["Node.js", "Django", "Spring", "Laravel"], "cardClass": "b33" },
+        { "title": "API", "tags": ["REST", "GraphQL", "WebSocket", "gRPC"], "cardClass": "b34" },
+        { "title": "Авторизация", "tags": ["JWT", "OAuth 2.0", "Session", "Cookies"], "cardClass": "b35" },
+        { "title": "Безопасность", "tags": ["TLS/SSL", "CORS", "XSS", "CSRF"], "cardClass": "b36" },
+        { "title": "CSS", "tags": ["Flexbox", "Grid", "Media Query", "Responsive"], "cardClass": "b37" },
+        { "title": "Сборка", "tags": ["Webpack", "Vite", "Parcel", "Rollup"], "cardClass": "b38" },
+        { "title": "Тесты Web", "tags": ["Jest", "Mocha", "Chai", "Vitest"], "cardClass": "b39" },
+        { "title": "Прочее", "tags": ["SEO", "SSR", "SPA", "PWA"], "cardClass": "b40" }
+      ]
+    }
+  ]
+}
