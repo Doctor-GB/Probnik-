@@ -1,0 +1,38 @@
+{
+  "ui": {
+    "title": "My Cards Page"
+  },
+  "sec": {
+    "langs": "Languages & Tech",
+    "devops": "DevOps"
+  },
+  "c": {
+    "langs": "Languages",
+    "be": "Backend",
+    "fe": "Frontend",
+    "cont": "Containers",
+    "orch": "Orchestration"
+  },
+  "t": {
+    "js": "JavaScript",
+    "py": "Python",
+    "java": "Java",
+    "cpp": "C++",
+    "node": "Node.js",
+    "django": "Django",
+    "spring": "Spring",
+    "express": "Express",
+    "react": "React",
+    "vue": "Vue",
+    "ang": "Angular",
+    "svelte": "Svelte",
+    "docker": "Docker",
+    "pod": "Podman",
+    "lxc": "LXC",
+    "contd": "Containerd",
+    "k8s": "Kubernetes",
+    "swarm": "Swarm",
+    "os": "OpenShift",
+    "nom": "Nomad"
+  }
+}
