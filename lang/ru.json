@@ -1,38 +1,6 @@
 {
   "ui": {
-    "title": "Моя страница с карточками"
-  },
-  "sec": {
-    "langs": "Языки и технологии",
-    "devops": "DevOps"
-  },
-  "c": {
-    "langs": "Языки",
-    "be": "Backend",
-    "fe": "Frontend",
-    "cont": "Контейнеры",
-    "orch": "Оркестрация"
-  },
-  "t": {
-    "js": "JavaScript",
-    "py": "Python",
-    "java": "Java",
-    "cpp": "C++",
-    "node": "Node.js",
-    "django": "Django",
-    "spring": "Spring",
-    "express": "Express",
-    "react": "React",
-    "vue": "Vue",
-    "ang": "Angular",
-    "svelte": "Svelte",
-    "docker": "Docker",
-    "pod": "Podman",
-    "lxc": "LXC",
-    "contd": "Containerd",
-    "k8s": "Kubernetes",
-    "swarm": "Swarm",
-    "os": "OpenShift",
-    "nom": "Nomad"
+    "title": "Моя страница с карточками",
+    "placeholder": "Проверка направления ввода..."
   }
 }
