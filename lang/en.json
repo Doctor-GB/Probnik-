@@ -1,6 +1,44 @@
 {
-  "ui": {
-    "title": "My Cards Page",
-    "placeholder": "Input direction test..."
+  "ui": { "title": "My Cards Page" },
+  "sec": { "langs": "Languages & Tech", "devops": "DevOps", "algo": "Algorithms", "web": "Web" },
+  "c": {
+    "langs": "Languages", "be": "Backend", "fe": "Frontend", "db": "Databases", "git": "Version Control", "http": "HTTP Methods",
+    "arch": "Architecture", "test": "Testing", "edit": "Editors/IDEs", "os": "Operating Systems",
+    "cont": "Containers", "orch": "Orchestration", "cicd": "CI/CD", "cloud": "Cloud", "mon": "Monitoring",
+    "logs": "Logging", "net": "Networking", "serv": "Servers", "scr": "Scripting", "util": "Utilities",
+    "sort": "Sorting", "search": "Search", "struct": "Structures", "hash": "Hashing", "tree": "Trees",
+    "graph": "Graphs", "comp": "Complexity", "rec": "Recursion", "greed": "Greedy", "misc": "Misc",
+    "wfe": "Frontend", "fw": "Frameworks", "wbe": "Backend", "api": "APIs", "auth": "Auth",
+    "sec": "Security", "cssw": "CSS", "build": "Bundlers", "wtest": "Web Testing", "other": "Other"
+  },
+  "t": {
+    "js": "JavaScript", "py": "Python", "java": "Java", "cpp": "C++", "node": "Node.js", "django": "Django",
+    "spring": "Spring", "express": "Express", "react": "React", "vue": "Vue", "ang": "Angular", "svelte": "Svelte",
+    "mysql": "MySQL", "mongo": "MongoDB", "pg": "PostgreSQL", "redis": "Redis", "gh": "GitHub", "gl": "GitLab",
+    "bb": "Bitbucket", "st": "SourceTree", "get": "GET", "post": "POST", "put": "PUT", "del": "DELETE",
+    "mvc": "MVC", "mvp": "MVP", "mvvm": "MVVM", "clean": "Clean", "unit": "Unit", "int": "Integration",
+    "e2e": "E2E", "mock": "Mock", "vs": "VS Code", "ws": "WebStorm", "ij": "IntelliJ", "sub": "Sublime",
+    "linux": "Linux", "win": "Windows", "mac": "macOS", "ubu": "Ubuntu", "docker": "Docker", "pod": "Podman",
+    "lxc": "LXC", "contd": "Containerd", "k8s": "Kubernetes", "swarm": "Swarm", "os": "OpenShift", "nom": "Nomad",
+    "jenk": "Jenkins", "gha": "GitHub Actions", "glc": "GitLab CI", "circle": "CircleCI", "aws": "AWS",
+    "az": "Azure", "gcp": "GCP", "do": "DigitalOcean", "prom": "Prometheus", "graf": "Grafana",
+    "zab": "Zabbix", "dd": "Datadog", "elk": "ELK Stack", "flu": "Fluentd", "log": "Logstash",
+    "kib": "Kibana", "tcp": "TCP/IP", "udp": "UDP", "httpn": "HTTP", "https": "HTTPS", "nginx": "Nginx",
+    "ap": "Apache", "cad": "Caddy", "iis": "IIS", "bash": "Bash", "pwsh": "PowerShell", "pys": "Python",
+    "perl": "Perl", "ssh": "SSH", "ftp": "FTP", "scp": "SCP", "rsync": "rsync", "bub": "Bubble",
+    "quick": "Quick", "mer": "Merge", "heap": "Heap", "bin": "Binary", "lin": "Linear", "dfs": "DFS",
+    "bfs": "BFS", "arr": "Array", "list": "List", "stack": "Stack", "q": "Queue", "hmap": "HashMap",
+    "hset": "HashSet", "htab": "HashTable", "key": "Key", "btree": "Binary", "avl": "AVL", "rb": "Red-Black",
+    "trie": "Trie", "nodes": "Nodes", "edges": "Edges", "w": "Weight", "path": "Path", "o1": "O(1)",
+    "on": "O(n)", "log": "O(log n)", "o2": "O(n²)", "cstack": "Call Stack", "base": "Base Case",
+    "recur": "Recursive", "ret": "Return", "cho": "Choice", "lopt": "Local Opt", "gopt": "Global Opt",
+    "fast": "Fast", "dyn": "Dynamic", "memo": "Memoization", "cache": "Cache", "state": "State",
+    "html": "HTML5", "css": "CSS3", "jsd": "JavaScript", "dom": "DOM", "rfe": "React", "vuej": "Vue.js",
+    "angf": "Angular", "svel": "Svelte", "nodw": "Node.js", "djw": "Django", "spw": "Spring", "lar": "Laravel",
+    "rest": "REST", "gql": "GraphQL", "ws": "WebSocket", "grpc": "gRPC", "jwt": "JWT", "oauth": "OAuth 2.0",
+    "sess": "Session", "cook": "Cookies", "tls": "TLS/SSL", "cors": "CORS", "xss": "XSS", "csrf": "CSRF",
+    "flex": "Flexbox", "grid": "Grid", "mq": "Media Query", "resp": "Responsive", "webp": "Webpack",
+    "vite": "Vite", "par": "Parcel", "roll": "Rollup", "jest": "Jest", "moch": "Mocha", "chai": "Chai",
+    "vit": "Vitest", "seo": "SEO", "ssr": "SSR", "spa": "SPA", "pwa": "PWA"
   }
 }
